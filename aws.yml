@@ -1,6 +1,6 @@
 ---
 test-instance:
-  region: eu-west-1
+  region: us-west-1
   ami_id: ami-9887c6e7
   instance_type: t2.micro
   tags:
