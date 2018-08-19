@@ -2,4 +2,5 @@
 test-instance:
   ami_id: ami-9887c6e7
   instance_type: t2.micro
-  Name: terraform-consul
+  tags:
+    Name: terraform-consul
