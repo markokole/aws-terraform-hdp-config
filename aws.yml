@@ -2,6 +2,7 @@
 test-instance:
   region: us-east-1
   availability_zone : us-east-1a
+  subnet_id: subnet-9bce3afc
   ami_id: ami-9887c6e7
   instance_type: t2.micro
   key_pair: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCBDPryYUPHpvF2z3OWJ0nI/G7TuL+R2xdlfmU/eXPd7x1qcoYlS1Eg75kDL75oWfiNrKrmusPOQTZwKW5yG/CZuhnmTM89HVxe3GAe8X50yvI4Gqn5MHN4AtyIW/dx7mdIrYSrmPV0EBdhccqalX17AxKbqDxdPylVUNEhOfmepLBnQoE/AeXUjfVmSX1VQktPUG2o/7FYn9xnQwzy1PgRm16Qi14L68vE+9AQ/jR22tmZNXG30sskq1rbOV6BBchiehwEkoz+3X8rK1JfpZ+HhZaoES4Hy4Lnr/2qtRHt8B2YwffDPa9WDyDaeSUu7VYqP9psGfvj2lb8rG3DwzmZ
