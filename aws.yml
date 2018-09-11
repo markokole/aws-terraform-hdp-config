@@ -9,3 +9,4 @@ test-instance:
 hdp:
   cluster-minimal: /resources/hdp-cluster-minimal.yml
   cluster-hadoop3: /resources/hdp-cluster-hadoop3.yml
+  single-minimal: /resources/hdp-single-minimal.yml
