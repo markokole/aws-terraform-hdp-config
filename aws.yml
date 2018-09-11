@@ -10,3 +10,4 @@ hdp:
   cluster-minimal: /resources/hdp-cluster-minimal.yml
   cluster-hadoop3: /resources/hdp-cluster-hadoop3.yml
   single-minimal: /resources/hdp-single-minimal.yml
+  single-hadoop3: /resources/hdp-single-hadoop3.yml
