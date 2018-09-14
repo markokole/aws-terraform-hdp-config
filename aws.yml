@@ -8,7 +8,7 @@ test-instance:
     Name: terraform-consul
 hdp:
   cluster-minimal: /resources/hdp-cluster-minimal.yml
-  cluster-ranger: /resources/hdp-cluster-ranger.yml
+  cluster-ranger-knox: /resources/hdp-cluster-ranger-knox.yml
   cluster-hadoop3: /resources/hdp-cluster-hadoop3.yml
   single-minimal: /resources/hdp-single-minimal.yml
   single-hadoop3: /resources/hdp-single-hadoop3.yml
