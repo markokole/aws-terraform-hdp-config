@@ -3,13 +3,13 @@ test-instance:
   region: us-east-1
   availability_zone: us-east-1a
   ami_id: ami-9887c6e7
-  instance_type: t2.large
+  instance_type: t2.xlarge
   tags:
     Name: terraform-consul
 hdp:
-  cluster-minimal: /resources/hdp-cluster-minimal.yml
-  cluster-ranger-knox: /resources/hdp-cluster-ranger-knox.yml
-  cluster-hadoop3: /resources/hdp-cluster-hadoop3.yml
-  single-minimal: /resources/hdp-single-minimal.yml
-  single-hadoop3: /resources/hdp-single-hadoop3.yml
-  no_instances: 1
+  cluster-minimal: /resources/hdp-configs/hdp-cluster-minimal.yml
+  cluster-bigsql: /resources/hdp-configs/hdp-cluster-bigsql.yml
+  cluster-hadoop3: /resources/hdp-configs/hdp-cluster-hadoop3.yml
+  single-minimal: /resources/hdp-configs/hdp-single-minimal.yml
+  single-hadoop3: /resources/hdp-configs/hdp-single-hadoop3.yml
+  no_instances: 2
