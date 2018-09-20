@@ -15,4 +15,4 @@ hdp:
   no_instances: 2
   cluster_name: hdp-bigsql
   master-clients: ['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'HIVE_CLIENT']
-  master-services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - RESOURCEMANAGER\n      - APP_TIMELINE_SERVER\n      - HISTORYSERVER\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - WEBHCAT_SERVER\n      - AMBARI_SERVER\n      - METRICS_COLLECTOR\n        - METRICS_MONITOR\n      - HST_SERVER"
+  master-services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - RESOURCEMANAGER\n      - APP_TIMELINE_SERVER\n      - HISTORYSERVER\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - WEBHCAT_SERVER\n      - AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - HST_SERVER"
