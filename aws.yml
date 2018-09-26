@@ -13,8 +13,7 @@ hdp-single:
   hdp_version: "2.6.5.0"
   hdp_build_number: auto
   master-clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'HIVE_CLIENT']"
-  master-services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - RESOURCEMANAGER\n      - APP_TIMELINE_SERVER\n      - HISTORYSERVER\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - WEBHCAT_SERVER\n      - AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - HST_SERVER"
-  slave-services: "- DATANODE\n      - NODEMANAGER\n      - METRICS_MONITOR\n      - HST_AGENT"
+  master-services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - RESOURCEMANAGER\n      - APP_TIMELINE_SERVER\n      - HISTORYSERVER\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - WEBHCAT_SERVER\n      - AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - DATANODE\n      - HST_SERVER"
 hdp-minimum:
   instance_type: t2.large
   no_instances: 2
