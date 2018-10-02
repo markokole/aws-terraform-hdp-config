@@ -37,6 +37,16 @@ hdp-bigsql:
   master-services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - RESOURCEMANAGER\n      - APP_TIMELINE_SERVER\n      - HISTORYSERVER\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - WEBHCAT_SERVER\n      - AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - HST_SERVER\n      - HBASE_MASTER\n      - HBASE_REGIONSERVER\n      - KNOX_GATEWAY"
   slave-services: "- DATANODE\n      - NODEMANAGER\n      - METRICS_MONITOR\n      - HST_AGENT"
 
+hdp-hdfs-only:
+  instance_type: t2.large
+  no_instances: 1
+  cluster_name: hdp-hdfs-only
+  ambari_version: "2.6.2.2"
+  hdp_version: "2.6.5.0"
+  hdp_build_number: "auto"
+  master-clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
+  master-services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - DATANODE\n      - SECONDARY_NAMENODE\n      - AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n"
+
 hdp-hdp3:
   instance_type: t2.xlarge
   no_instances: 2
@@ -58,13 +68,3 @@ hdp-hdp301:
   master-clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'HIVE_CLIENT']"
   master-services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - RESOURCEMANAGER\n      - APP_TIMELINE_SERVER\n      - HISTORYSERVER\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - HST_SERVER\n      - YARN_REGISTRY_DNS\n      - TIMELINE_READER"
   slave-services: "- DATANODE\n      - NODEMANAGER\n      - METRICS_MONITOR\n      - HST_AGENT"
-
-hdp-hdfs-only:
-  instance_type: t2.large
-  no_instances: 1
-  cluster_name: hdp-hdfs-only
-  ambari_version: "2.6.2.2"
-  hdp_version: "2.6.5.0"
-  hdp_build_number: "auto"
-  master-clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
-  master-services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - DATANODE\n      - SECONDARY_NAMENODE\n      - AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n"
