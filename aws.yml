@@ -69,7 +69,7 @@ hdp-hdp301:
   master-services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - RESOURCEMANAGER\n      - APP_TIMELINE_SERVER\n      - HISTORYSERVER\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - HST_SERVER\n      - YARN_REGISTRY_DNS\n      - TIMELINE_READER"
   slave-services: "- DATANODE\n      - NODEMANAGER\n      - METRICS_MONITOR\n      - HST_AGENT"
 r-server:
-  instance_type: t2.micro
+  instance_type: t2.small
   no_instances: 1
   tags:
     Name: r-server
