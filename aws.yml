@@ -40,7 +40,7 @@ hdp-bigsql:
 hdp-hdfs-cluster:
   instance_type: t2.large
   no_instances: 3
-  cluster_name: hdp-hdfs-only
+  cluster_name: hdp-hdfs-cluster
   ambari_version: "2.6.2.2"
   hdp_version: "2.6.5.0"
   hdp_build_number: "auto"
@@ -51,7 +51,7 @@ hdp-hdfs-cluster:
 hdp-hdfs-single:
   instance_type: t2.xlarge
   no_instances: 1
-  cluster_name: hdp-hdfs-only
+  cluster_name: hdp-hdfs-single
   ambari_version: "2.6.2.2"
   hdp_version: "2.6.5.0"
   hdp_build_number: "auto"
