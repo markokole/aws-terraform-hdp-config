@@ -39,14 +39,16 @@ hdp-bigsql:
 
 hdp-hdfs-cluster:
   instance_type: t2.large
-  no_instances: 3
+  no_instances: 5
   cluster_name: hdp-hdfs-cluster
   ambari_version: "2.6.2.2"
   hdp_version: "2.6.5.0"
   hdp_build_number: "auto"
   ambari_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR"
   master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
-  master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - METRICS_MONITOR\n      - DATANODE\n      - METRICS_MONITOR"
+  master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - METRICS_MONITOR"
+  slave_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
+  slave_services: "- METRICS_MONITOR\n      - DATANODE"
 
 hdp-hdfs-single:
   instance_type: t2.xlarge
