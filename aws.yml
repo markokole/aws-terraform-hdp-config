@@ -39,7 +39,7 @@ hdp-bigsql:
 
 hdp-hdfs-cluster:
   instance_type: t2.large
-  no_instances: 3
+  no_instances: 2
   cluster_name: hdp-hdfs-cluster
   ambari_version: "2.6.2.2"
   hdp_version: "2.6.5.0"
