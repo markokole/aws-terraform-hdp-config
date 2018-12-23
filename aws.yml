@@ -46,7 +46,7 @@ hdp-hdfs-cluster:
   hdp_build_number: "auto"
   ambari_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR"
   master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
-  master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - METRICS_MONITOR"
+  master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - METRICS_MONITOR\n      - JOURNALNODE"
   slave_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
   slave_services: "- METRICS_MONITOR\n      - DATANODE"
 
