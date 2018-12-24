@@ -44,9 +44,9 @@ hdp-all-cluster:
   ambari_version: "2.6.2.2"
   hdp_version: "2.6.5.0"
   hdp_build_number: "auto"
-  ambari_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - JOURNALNODE\n      - APP_TIMELINE_SERVER\n      - HST_SERVER\n      - HST_AGENT\n      - HISTORYSERVER\n      - SPARK2_JOBHISTORYSERVER"
+  ambari_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - JOURNALNODE\n      - APP_TIMELINE_SERVER\n      - HST_SERVER\n      - HST_AGENT\n      - HISTORYSERVER\n      - SPARK2_JOBHISTORYSERVER\n      - KNOX_GATEWAY"
   master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'HIVE_CLIENT', 'HCAT', 'TEZ_CLIENT', 'SLIDER', 'SQOOP', 'HBASE_CLIENT', 'PIG', 'SPARK2_CLIENT']"
-  master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - METRICS_MONITOR\n      - JOURNALNODE\n      - ZKFC\n      - RESOURCEMANAGER\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - WEBHCAT_SERVER\n      - HBASE_MASTER\n      - HST_AGENT\n      - KNOX_GATEWAY"
+  master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - METRICS_MONITOR\n      - JOURNALNODE\n      - ZKFC\n      - RESOURCEMANAGER\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - WEBHCAT_SERVER\n      - HBASE_MASTER\n      - HST_AGENT"
   slave_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'HIVE_CLIENT', 'HCAT', 'TEZ_CLIENT', 'SLIDER', 'SQOOP', 'HBASE_CLIENT', 'PIG', 'SPARK2_CLIENT']"
   slave_services: "- METRICS_MONITOR\n      - DATANODE\n      - NODEMANAGER\n      - HST_AGENT\n      - HBASE_REGIONSERVER"
 
