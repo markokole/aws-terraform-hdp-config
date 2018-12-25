@@ -37,10 +37,10 @@ hdp-bigsql:
   master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - RESOURCEMANAGER\n      - APP_TIMELINE_SERVER\n      - HISTORYSERVER\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - WEBHCAT_SERVER\n      - AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - HST_SERVER\n      - HBASE_MASTER\n      - HBASE_REGIONSERVER\n      - KNOX_GATEWAY"
   slave_services: "- DATANODE\n      - NODEMANAGER\n      - METRICS_MONITOR\n      - HST_AGENT"
 
-hdp-all-cluster:
+max-cluster:
   instance_type: t2.large
   no_instances: 5
-  cluster_name: hdp-all-cluster
+  cluster_name: max-cluster
   ambari_version: "2.6.2.2"
   hdp_version: "2.6.5.0"
   hdp_build_number: "auto"
@@ -51,26 +51,28 @@ hdp-all-cluster:
   slave_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'HIVE_CLIENT', 'HCAT', 'TEZ_CLIENT', 'SLIDER', 'SQOOP', 'HBASE_CLIENT', 'PIG', 'SPARK2_CLIENT']"
   slave_services: "- METRICS_MONITOR\n      - DATANODE\n      - NODEMANAGER\n      - HST_AGENT\n      - HBASE_REGIONSERVER"
 
-hdp-hdfs-cluster:
+min-cluster:
   instance_type: t2.large
   no_instances: 5
-  cluster_name: hdp-hdfs-cluster
+  cluster_name: min-cluster
   ambari_version: "2.6.2.2"
   hdp_version: "2.6.5.0"
   hdp_build_number: "auto"
+  database: postgres
   ambari_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - JOURNALNODE"
   master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
   master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - METRICS_MONITOR\n      - JOURNALNODE\n      - ZKFC"
   slave_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
   slave_services: "- METRICS_MONITOR\n      - DATANODE"
 
-hdp-hdfs-single:
-  instance_type: t2.xlarge
+min-single:
+  instance_type: t2.large
   no_instances: 1
-  cluster_name: hdp-hdfs-single
+  cluster_name: min-single
   ambari_version: "2.6.2.2"
   hdp_version: "2.6.5.0"
   hdp_build_number: "auto"
+  database: postgres
   master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
   master_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - METRICS_MONITOR\n      - DATANODE\n      - METRICS_MONITOR"
 
