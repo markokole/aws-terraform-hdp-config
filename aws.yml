@@ -65,6 +65,18 @@ min-cluster:
   slave_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
   slave_services: "- METRICS_MONITOR\n      - DATANODE"
 
+min-cluster-skatt:
+  instance_type: t2.large
+  no_instances: 5
+  cluster_name: min-cluster-skatt
+  ambari_version: "2.6.2.2"
+  hdp_version: "2.6.5.0"
+  hdp_build_number: "auto"
+  database: postgres
+  ambari_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - JOURNALNODE"
+  master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
+  master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - METRICS_MONITOR\n      - JOURNALNODE\n      - ZKFC\n      - DATANODE"
+
 min-single:
   instance_type: t2.large
   no_instances: 1
