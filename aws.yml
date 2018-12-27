@@ -38,6 +38,7 @@ hdp-bigsql:
   slave_services: "- DATANODE\n      - NODEMANAGER\n      - METRICS_MONITOR\n      - HST_AGENT"
 
 max-cluster:
+  type: classic
   instance_type: t2.large
   no_instances: 5
   cluster_name: max-cluster
@@ -52,6 +53,7 @@ max-cluster:
   slave_services: "- METRICS_MONITOR\n      - DATANODE\n      - NODEMANAGER\n      - HST_AGENT\n      - HBASE_REGIONSERVER"
 
 min-cluster:
+  type: classic
   instance_type: t2.large
   no_instances: 5
   cluster_name: min-cluster
@@ -66,6 +68,7 @@ min-cluster:
   slave_services: "- METRICS_MONITOR\n      - DATANODE"
 
 min-cluster-skatt:
+  type: skatt
   instance_type: t2.large
   no_instances: 5
   cluster_name: min-cluster-skatt
@@ -78,6 +81,7 @@ min-cluster-skatt:
   master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - METRICS_MONITOR\n      - JOURNALNODE\n      - ZKFC\n      - DATANODE"
 
 min-single:
+  type: single
   instance_type: t2.large
   no_instances: 1
   cluster_name: min-single
