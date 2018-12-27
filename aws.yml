@@ -55,7 +55,8 @@ max-cluster-classic:
 min-cluster:
   type: classic
   instance_type: t2.large
-  no_instances: 5
+  no_instances: 7
+  no_namenodes: 2
   cluster_name: min-cluster
   ambari_version: "2.6.2.2"
   hdp_version: "2.6.5.0"
