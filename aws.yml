@@ -5,13 +5,58 @@ test-instance:
   ami_id: ami-9887c6e7
   tags:
     Name: terraform-consul
+
+max-cluster:
+  type: classic
+  instance_type: t2.large
+  no_instances: 10
+  cluster_name: max-cluster
+  ambari_version: "2.6.2.2"
+  hdp_version: "2.6.5.0"
+  hdp_build_number: "auto"
+  database: postgres
+  ambari_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - JOURNALNODE\n      - APP_TIMELINE_SERVER\n      - HST_SERVER\n      - HST_AGENT\n      - HISTORYSERVER\n      - SPARK2_JOBHISTORYSERVER\n      - KNOX_GATEWAY\n      - RANGER_ADMIN\n      - RANGER_USERSYNC\n      - RANGER_KMS_SERVER"
+  master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'HIVE_CLIENT', 'HCAT', 'TEZ_CLIENT', 'SLIDER', 'SQOOP', 'HBASE_CLIENT', 'PIG', 'SPARK2_CLIENT']"
+  master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - METRICS_MONITOR\n      - JOURNALNODE\n      - ZKFC\n      - RESOURCEMANAGER\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - WEBHCAT_SERVER\n      - HBASE_MASTER\n      - HST_AGENT"
+  slave_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'HIVE_CLIENT', 'HCAT', 'TEZ_CLIENT', 'SLIDER', 'SQOOP', 'HBASE_CLIENT', 'PIG', 'SPARK2_CLIENT']"
+  slave_services: "- METRICS_MONITOR\n      - DATANODE\n      - NODEMANAGER\n      - HST_AGENT\n      - HBASE_REGIONSERVER"
+
+min-cluster:
+  type: cluster
+  instance_type: t2.large
+  no_instances: 7
+  cluster_name: min-cluster
+  ambari_version: "2.6.2.2"
+  hdp_version: "2.6.5.0"
+  hdp_build_number: "auto"
+  database: postgres
+  ambari_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - JOURNALNODE"
+  master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
+  master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - METRICS_MONITOR\n      - JOURNALNODE\n      - ZKFC"
+  slave_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
+  slave_services: "- METRICS_MONITOR\n      - DATANODE"
+
+min-single:
+  type: single
+  instance_type: t2.large
+  no_instances: 1
+  cluster_name: min-single
+  ambari_version: "2.6.2.2"
+  hdp_version: "2.6.5.0"
+  hdp_build_number: "auto"
+  database: postgres
+  master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
+  master_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - METRICS_MONITOR\n      - DATANODE\n      - METRICS_MONITOR"
+
 hdp-single:
+  type: single
   instance_type: t2.xlarge
   no_instances: 1
   cluster_name: hdp-single
   ambari_version: "2.6.2.2"
   hdp_version: "2.6.5.0"
   hdp_build_number: auto
+  database: postgres
   master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'HIVE_CLIENT']"
   master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - RESOURCEMANAGER\n      - APP_TIMELINE_SERVER\n      - HISTORYSERVER\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - WEBHCAT_SERVER\n      - AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - DATANODE\n      - NODEMANAGER\n      - HST_SERVER"
 
@@ -36,62 +81,6 @@ hdp-bigsql:
   master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'HIVE_CLIENT', 'HCAT', 'TEZ_CLIENT', 'SLIDER', 'SQOOP', 'HBASE_CLIENT', 'PIG']"
   master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - RESOURCEMANAGER\n      - APP_TIMELINE_SERVER\n      - HISTORYSERVER\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - WEBHCAT_SERVER\n      - AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - HST_SERVER\n      - HBASE_MASTER\n      - HBASE_REGIONSERVER\n      - KNOX_GATEWAY"
   slave_services: "- DATANODE\n      - NODEMANAGER\n      - METRICS_MONITOR\n      - HST_AGENT"
-
-max-cluster-classic:
-  type: classic
-  instance_type: t2.large
-  no_instances: 10
-  cluster_name: max-cluster-classic
-  ambari_version: "2.6.2.2"
-  hdp_version: "2.6.5.0"
-  hdp_build_number: "auto"
-  database: postgres
-  ambari_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - JOURNALNODE\n      - APP_TIMELINE_SERVER\n      - HST_SERVER\n      - HST_AGENT\n      - HISTORYSERVER\n      - SPARK2_JOBHISTORYSERVER\n      - KNOX_GATEWAY\n      - RANGER_ADMIN\n      - RANGER_USERSYNC\n      - RANGER_KMS_SERVER"
-  master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'HIVE_CLIENT', 'HCAT', 'TEZ_CLIENT', 'SLIDER', 'SQOOP', 'HBASE_CLIENT', 'PIG', 'SPARK2_CLIENT']"
-  master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - METRICS_MONITOR\n      - JOURNALNODE\n      - ZKFC\n      - RESOURCEMANAGER\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - WEBHCAT_SERVER\n      - HBASE_MASTER\n      - HST_AGENT"
-  slave_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'HIVE_CLIENT', 'HCAT', 'TEZ_CLIENT', 'SLIDER', 'SQOOP', 'HBASE_CLIENT', 'PIG', 'SPARK2_CLIENT']"
-  slave_services: "- METRICS_MONITOR\n      - DATANODE\n      - NODEMANAGER\n      - HST_AGENT\n      - HBASE_REGIONSERVER"
-
-min-cluster:
-  type: classic
-  instance_type: t2.large
-  no_instances: 7
-  no_namenodes: 4
-  cluster_name: min-cluster
-  ambari_version: "2.6.2.2"
-  hdp_version: "2.6.5.0"
-  hdp_build_number: "auto"
-  database: postgres
-  ambari_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - JOURNALNODE"
-  master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
-  master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - METRICS_MONITOR\n      - JOURNALNODE\n      - ZKFC"
-  slave_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
-  slave_services: "- METRICS_MONITOR\n      - DATANODE"
-
-min-cluster-skatt:
-  type: skatt
-  instance_type: t2.large
-  no_instances: 5
-  cluster_name: min-cluster-skatt
-  ambari_version: "2.6.2.2"
-  hdp_version: "2.6.5.0"
-  hdp_build_number: "auto"
-  database: postgres
-  ambari_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - JOURNALNODE"
-  master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
-  master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - METRICS_MONITOR\n      - JOURNALNODE\n      - ZKFC\n      - DATANODE"
-
-min-single:
-  type: single
-  instance_type: t2.large
-  no_instances: 1
-  cluster_name: min-single
-  ambari_version: "2.6.2.2"
-  hdp_version: "2.6.5.0"
-  hdp_build_number: "auto"
-  database: postgres
-  master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
-  master_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - METRICS_MONITOR\n      - DATANODE\n      - METRICS_MONITOR"
 
 hdp-hdp3:
   instance_type: t2.xlarge
