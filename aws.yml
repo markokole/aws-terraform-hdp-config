@@ -9,7 +9,7 @@ test-instance:
 max-cluster:
   type: cluster
   instance_type: t2.large
-  no_instances: 10
+  no_instances: 7
   cluster_name: max-cluster
   ambari_version: "2.6.2.2"
   hdp_version: "2.6.5.0"
