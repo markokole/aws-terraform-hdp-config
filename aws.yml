@@ -11,9 +11,9 @@ max-cluster:
   instance_type: t2.large
   no_datanodes: 3
   cluster_name: max-cluster
-  ambari_version: "2.6.2.2"
-  hdp_version: "2.6.5.0"
-  hdp_build_number: "auto"
+  ambari_version: 2.6.2.2
+  hdp_version: 2.6.5.0
+  hdp_build_number: auto
   database: postgres
   ambari_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - JOURNALNODE\n      - APP_TIMELINE_SERVER\n      - HST_SERVER\n      - HST_AGENT\n      - HISTORYSERVER\n      - SPARK2_JOBHISTORYSERVER\n      - KNOX_GATEWAY\n      - RANGER_ADMIN\n      - RANGER_USERSYNC\n      - RANGER_KMS_SERVER"
   master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'HIVE_CLIENT', 'HCAT', 'TEZ_CLIENT', 'SLIDER', 'SQOOP', 'HBASE_CLIENT', 'PIG', 'SPARK2_CLIENT']"
