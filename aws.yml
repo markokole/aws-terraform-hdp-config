@@ -9,7 +9,7 @@ test-instance:
 max-cluster:
   type: cluster
   instance_type: t2.large
-  no_instances: 7
+  no_datanodes: 3
   cluster_name: max-cluster
   ambari_version: "2.6.2.2"
   hdp_version: "2.6.5.0"
@@ -24,7 +24,7 @@ max-cluster:
 min-cluster:
   type: cluster
   instance_type: t2.large
-  no_instances: 7
+  no_datanodes: 4
   cluster_name: min-cluster
   ambari_version: "2.6.2.2"
   hdp_version: "2.6.5.0"
@@ -39,7 +39,6 @@ min-cluster:
 min-single:
   type: single
   instance_type: t2.large
-  no_instances: 1
   cluster_name: min-single
   ambari_version: "2.6.2.2"
   hdp_version: "2.6.5.0"
@@ -51,7 +50,6 @@ min-single:
 hdp-single:
   type: single
   instance_type: t2.xlarge
-  no_instances: 1
   cluster_name: hdp-single
   ambari_version: "2.6.2.2"
   hdp_version: "2.6.5.0"
