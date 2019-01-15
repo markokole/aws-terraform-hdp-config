@@ -19,9 +19,9 @@ max-cluster:
   hdp_version: "3.1.0.0"
   hdp_build_number: "78"
   database: postgres
-  ambari_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - JOURNALNODE\n      - APP_TIMELINE_SERVER\n      - HST_SERVER\n      - HST_AGENT\n      - HISTORYSERVER\n      - SPARK2_JOBHISTORYSERVER\n      - KNOX_GATEWAY\n      - RANGER_ADMIN\n      - RANGER_USERSYNC\n      - RANGER_KMS_SERVER"
+  ambari_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - JOURNALNODE\n      - APP_TIMELINE_SERVER\n      - HST_SERVER\n      - HST_AGENT\n      - HISTORYSERVER\n      - SPARK2_JOBHISTORYSERVER\n      - KNOX_GATEWAY\n      - RANGER_ADMIN\n      - RANGER_USERSYNC\n      - RANGER_KMS_SERVER\n      - YARN_REGISTRY_DNS"
   master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'HIVE_CLIENT', 'TEZ_CLIENT', 'SQOOP', 'HBASE_CLIENT', 'PIG', 'SPARK2_CLIENT']"
-  master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - METRICS_MONITOR\n      - JOURNALNODE\n      - ZKFC\n      - RESOURCEMANAGER\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - HBASE_MASTER\n      - HST_AGENT\n      - YARN_REGISTRY_DNS\n      - TIMELINE_READER"
+  master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - METRICS_MONITOR\n      - JOURNALNODE\n      - ZKFC\n      - RESOURCEMANAGER\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - HBASE_MASTER\n      - HST_AGENT\n      - TIMELINE_READER"
   slave_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'HIVE_CLIENT', 'TEZ_CLIENT', 'SQOOP', 'HBASE_CLIENT', 'PIG', 'SPARK2_CLIENT']"
   slave_services: "- METRICS_MONITOR\n      - DATANODE\n      - NODEMANAGER\n      - HST_AGENT\n      - HBASE_REGIONSERVER"
 # When installing HDP 3 the component HCAT must not be part of the blueprint.
