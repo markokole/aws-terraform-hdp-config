@@ -1,10 +1,15 @@
 ---
+
+###### instance configuration ######
+
 test-instance:
   region: us-east-1
   availability_zone: us-east-1a
   ami_id: ami-9887c6e7
-  tags:
-    Name: terraform-consul
+
+######################
+
+###### multinode configuration ######
 
 max-cluster:
   type: cluster
@@ -36,12 +41,17 @@ min-cluster:
   slave_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
   slave_services: "- METRICS_MONITOR\n      - DATANODE"
 
+############################################################
+
 min-single:
-  type: single
-  instance_type: t2.large
-  cluster_name: min-single
-  ambari_version: "2.6.2.2"
-  hdp_version: "2.6.5.0"
+  type: "single"
+  instance_type: "t2.large"
+  cluster_name: "min-single"
+  #ambari_version: "2.6.2.2"
+  #hdp_version: "2.6.5.0"
+  #hdp_build_number: "auto"
+  ambari_version: "2.7.3.0"
+  hdp_version: "3.1.0.0"
   hdp_build_number: "auto"
   database: "embedded"
   master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
@@ -58,7 +68,6 @@ hdp-single:
   master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'YARN_CLIENT', 'MAPREDUCE2_CLIENT', 'HIVE_CLIENT']"
   master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - RESOURCEMANAGER\n      - APP_TIMELINE_SERVER\n      - HISTORYSERVER\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - WEBHCAT_SERVER\n      - AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - DATANODE\n      - NODEMANAGER\n      - HST_SERVER"
 
-############################################################
 
 hdp-minimum:
   type: cluster
