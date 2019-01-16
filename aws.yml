@@ -12,7 +12,6 @@ test-instance:
   path_to_generated_aws_properties: aws-properties/test-instance
   vpc_name: "Terraform VPC"
   gateway_name: "Terraform IGW"
-  route_table_name: "Terraform Route Table"
   route_table_cidr_block_all: 0.0.0.0/0
 ######################
 
