@@ -6,7 +6,9 @@ test-instance:
   region: us-east-1
   availability_zone: us-east-1a
   ami_id: ami-9887c6e7
+  cidr_block: 10.0.0.0/24
   generated_aws_properties: aws-properties/test-instance
+  vpc_name: "Terraform VPC"
 ######################
 
 ###### multinode configuration ######
