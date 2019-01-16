@@ -15,6 +15,7 @@ test-instance:
   route_table_cidr_block_all: 0.0.0.0/0
   subnet_name: "Terraform Subnet"
   map_public_ip_on_launch: true
+  security_group_name: terraform-security-group
 ######################
 
 ###### multinode configuration ######
