@@ -11,6 +11,7 @@ test-instance:
   # Consul path to tree where AWS properties will be written
   path_to_generated_aws_properties: aws-properties/test-instance
   vpc_name: "Terraform VPC"
+  gateway_name: "Terraform IGW"
 ######################
 
 ###### multinode configuration ######
