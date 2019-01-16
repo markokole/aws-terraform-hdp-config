@@ -12,7 +12,7 @@ test-instance:
 
 max-cluster:
   type: cluster
-  instance_type: t2.large
+  instance_type: t2.xlarge
   no_datanodes: 3
   cluster_name: max-cluster
   ambari_version: "2.7.3.0"
