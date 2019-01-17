@@ -66,7 +66,7 @@ min-single:
   master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
   master_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - METRICS_MONITOR\n      - DATANODE\n      - METRICS_MONITOR"
 
-  # single node cluster with minimal services
+  # single node cluster with Hive for work with S3
   hive-s3:
     type: "single"
     instance_type: "t2.large"
