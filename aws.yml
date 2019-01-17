@@ -91,16 +91,6 @@ hdp-single:
   master_services: "- ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - RESOURCEMANAGER\n      - APP_TIMELINE_SERVER\n      - HISTORYSERVER\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - DATANODE\n      - NODEMANAGER\n      - HST_SERVER\n      - YARN_REGISTRY_DNS\n      - TIMELINE_READER"
 # When installing HDP 3 the component WEBHCAT_SERVER must not be part of the blueprint.
 
-hdp-hive:
-  type: single
-  instance_type: t2.large
-  cluster_name: hdp-hive
-  ambari_version: "2.7.3.0"
-  hdp_version: "3.1.0.0"
-  hdp_build_number: "78"
-  database: "embedded"
-  master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'HIVE_CLIENT']"
-  master_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - METRICS_MONITOR\n      - DATANODE\n      - METRICS_MONITOR\n      - HIVE_SERVER\n      - HIVE_METASTORE"
 
 r-server:
   instance_type: t2.small
