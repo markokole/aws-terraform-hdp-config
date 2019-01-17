@@ -69,7 +69,7 @@ min-single:
 # single node cluster with Hive for work with S3
 hive-s3:
   type: "single"
-  instance_type: "t2.large"
+  instance_type: "t2.xlarge"
   cluster_name: "hive-s3"
   ambari_version: "2.7.3.0"
   hdp_version: "3.1.0.0"
@@ -78,7 +78,7 @@ hive-s3:
   master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'HIVE_CLIENT', 'MAPREDUCE2_CLIENT', 'YARN_CLIENT']"
   master_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - METRICS_MONITOR\n      - DATANODE\n      - METRICS_MONITOR\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - HISTORYSERVER\n      - TIMELINE_READER\n      - YARN_REGISTRY_DNS\n      - APP_TIMELINE_SERVER\n      - NODEMANAGER\n      - RESOURCEMANAGER"
 
-  
+
 # single node cluster with Hive, Yarn and Mapreduce
 hdp-single:
   type: single
