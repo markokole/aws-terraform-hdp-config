@@ -65,6 +65,7 @@ min-single:
   database: "embedded"
   master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
   master_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - DATANODE"
+  components: "ZOOKEEPER_CLIENT, HDFS_CLIENT, AMBARI_SERVER, METRICS_COLLECTOR, METRICS_MONITOR, ZOOKEEPER_SERVER, NAMENODE, SECONDARY_NAMENODE, DATANODE"
 
 # single node cluster with Hive for work with S3
 hive-s3:
