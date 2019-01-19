@@ -82,7 +82,28 @@ hive-s3:
   hdp_version: "3.1.0.0"
   hdp_build_number: "78"
   database: "embedded"
-  components: '{"name" : "ZOOKEEPER_CLIENT"},'
+  components: '{"name" : "ZOOKEEPER_CLIENT"},
+ {"name" : "HDFS_CLIENT"},
+ {"name" : "HIVE_CLIENT"},
+ {"name" : "MAPREDUCE2_CLIENT"},
+ {"name" : "YARN_CLIENT', AMBARI_SERVER"},
+ {"name" : "METRICS_COLLECTOR"},
+ {"name" : "METRICS_MONITOR"},
+ {"name" : "ZOOKEEPER_SERVER"},
+ {"name" : "NAMENODE"},
+ {"name" : "SECONDARY_NAMENODE"},
+ {"name" : "METRICS_MONITOR"},
+ {"name" : "DATANODE"},
+ {"name" : "METRICS_MONITOR"},
+ {"name" : "HIVE_SERVER"},
+ {"name" : "HIVE_METASTORE"},
+ {"name" : "HISTORYSERVER"},
+ {"name" : "TIMELINE_READER"},
+ {"name" : "YARN_REGISTRY_DNS"},
+ {"name" : "APP_TIMELINE_SERVER"},
+ {"name" : "NODEMANAGER"},
+ {"name" : "RESOURCEMANAGER"}'
+
 
 # single node cluster with Hive, Yarn and Mapreduce
 hdp-single:
