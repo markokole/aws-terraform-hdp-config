@@ -63,8 +63,6 @@ min-single:
   hdp_version: "3.1.0.0"
   hdp_build_number: "78"
   database: "embedded"
-  master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT']"
-  master_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - DATANODE"
   components: '{"name" : "ZOOKEEPER_CLIENT"},
  {"name" : "HDFS_CLIENT"},
  {"name" : "AMBARI_SERVER"},
@@ -75,8 +73,6 @@ min-single:
  {"name" : "SECONDARY_NAMENODE"},
  {"name" : "DATANODE"}'
 
-  #"['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'AMBARI_SERVER', 'METRICS_COLLECTOR', 'METRICS_MONITOR', 'ZOOKEEPER_SERVER', 'NAMENODE', 'SECONDARY_NAMENODE', 'DATANODE']"
-
 # single node cluster with Hive for work with S3
 hive-s3:
   type: "single"
@@ -86,8 +82,30 @@ hive-s3:
   hdp_version: "3.1.0.0"
   hdp_build_number: "78"
   database: "embedded"
-  master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'HIVE_CLIENT', 'MAPREDUCE2_CLIENT', 'YARN_CLIENT']"
-  master_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - METRICS_MONITOR\n      - DATANODE\n      - METRICS_MONITOR\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - HISTORYSERVER\n      - TIMELINE_READER\n      - YARN_REGISTRY_DNS\n      - APP_TIMELINE_SERVER\n      - NODEMANAGER\n      - RESOURCEMANAGER"
+  components: '{"name" : "ZOOKEEPER_CLIENT"},
+{"name" : "HDFS_CLIENT"},
+{"name" : "HIVE_CLIENT"},
+{"name" : "MAPREDUCE2_CLIENT"},
+{"name" : "YARN_CLIENT', AMBARI_SERVER"},
+{"name" : "METRICS_COLLECTOR"},
+{"name" : "METRICS_MONITOR"},
+{"name" : "ZOOKEEPER_SERVER"},
+{"name" : "NAMENODE"},
+{"name" : "SECONDARY_NAMENODE"},
+{"name" : "METRICS_MONITOR"},
+{"name" : "DATANODE"},
+{"name" : "METRICS_MONITOR"},
+{"name" : "HIVE_SERVER"},
+{"name" : "HIVE_METASTORE"},
+{"name" : "HISTORYSERVER"},
+{"name" : "TIMELINE_READER"},
+{"name" : "YARN_REGISTRY_DNS"},
+{"name" : "APP_TIMELINE_SERVER"},
+{"name" : "NODEMANAGER"},
+{"name" : "RESOURCEMANAGER"}'
+
+  #master_clients: "['ZOOKEEPER_CLIENT', 'HDFS_CLIENT', 'HIVE_CLIENT', 'MAPREDUCE2_CLIENT', 'YARN_CLIENT']"
+  #master_services: "- AMBARI_SERVER\n      - METRICS_COLLECTOR\n      - METRICS_MONITOR\n      - ZOOKEEPER_SERVER\n      - NAMENODE\n      - SECONDARY_NAMENODE\n      - METRICS_MONITOR\n      - DATANODE\n      - METRICS_MONITOR\n      - HIVE_SERVER\n      - HIVE_METASTORE\n      - HISTORYSERVER\n      - TIMELINE_READER\n      - YARN_REGISTRY_DNS\n      - APP_TIMELINE_SERVER\n      - NODEMANAGER\n      - RESOURCEMANAGER"
 
 
 # single node cluster with Hive, Yarn and Mapreduce
