@@ -56,7 +56,7 @@ min-cluster:
 
 # single node cluster with minimal services
 min-single:
-  type: "single"
+  type: "single222"
   instance_type: "t2.large"
   cluster_name: "min-single"
   ambari_version: "2.7.3.0"
@@ -75,7 +75,7 @@ min-single:
 
 # single node cluster with Hive for work with S3
 hive-s3:
-  type: "single111"
+  type: "single"
   instance_type: "t2.xlarge"
   cluster_name: "hive-s3"
   ambari_version: "2.7.3.0"
