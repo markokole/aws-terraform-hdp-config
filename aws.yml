@@ -81,7 +81,7 @@ hive-s3:
   ambari_version: "2.7.3.0"
   hdp_version: "3.1.0.0"
   hdp_build_number: "78"
-  database: "embedded"
+  database: "postgres"
   components: '{"name" : "ZOOKEEPER_CLIENT"},
  {"name" : "HDFS_CLIENT"},
  {"name" : "HIVE_CLIENT"},
