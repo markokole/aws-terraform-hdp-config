@@ -86,7 +86,8 @@ hive-s3:
  {"name" : "HDFS_CLIENT"},
  {"name" : "HIVE_CLIENT"},
  {"name" : "MAPREDUCE2_CLIENT"},
- {"name" : "YARN_CLIENT', AMBARI_SERVER"},
+ {"name" : "YARN_CLIENT"}
+ {"name" : "AMBARI_SERVER"},
  {"name" : "METRICS_COLLECTOR"},
  {"name" : "METRICS_MONITOR"},
  {"name" : "ZOOKEEPER_SERVER"},
