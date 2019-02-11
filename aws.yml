@@ -73,7 +73,6 @@ single-hive-s3:
  {"name" : "NODEMANAGER"},
  {"name" : "RESOURCEMANAGER"}'
 
-
 multi-min-s3:
   type: "cluster"
   instance_type: "t2.large"
@@ -92,11 +91,11 @@ multi-min-s3:
  {"name" : "ZOOKEEPER_SERVER"},
  {"name" : "NAMENODE"},
  {"name" : "SECONDARY_NAMENODE"}'
- slave: '{"name" : "ZOOKEEPER_CLIENT"},
-{"name" : "HDFS_CLIENT"},
-{"name" : "METRICS_MONITOR"},
-{"name" : "NODEMANAGER"},
-{"name" : "DATANODE"}'
+  slave: '{"name" : "ZOOKEEPER_CLIENT"},
+ {"name" : "HDFS_CLIENT"},
+ {"name" : "METRICS_MONITOR"},
+ {"name" : "NODEMANAGER"},
+ {"name" : "DATANODE"}'
 
 ###### multinode configuration ######
 
