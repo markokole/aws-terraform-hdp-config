@@ -55,10 +55,10 @@ min-cluster:
 ############################################################
 
 # single node cluster with minimal services
-min-single:
+single-min-s3:
   type: "single"
   instance_type: "t2.large"
-  cluster_name: "min-single"
+  cluster_name: "single-min-s3"
   ambari_version: "2.7.3.0"
   hdp_version: "3.1.0.0"
   hdp_build_number: "78"
