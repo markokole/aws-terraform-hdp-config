@@ -84,14 +84,14 @@ multi-min-s3:
   database: "embedded"
   s3a: "true"
   ambari_services: '{"name" : "AMBARI_SERVER"},
- {"name" : "METRICS_MONITOR"}'
+ {"name" : "METRICS_MONITOR"},
+ {"name" : "METRICS_COLLECTOR"}'
   master_services: '{"name" : "ZOOKEEPER_CLIENT"},
  {"name" : "HDFS_CLIENT"},
- {"name" : "METRICS_COLLECTOR"},
  {"name" : "METRICS_MONITOR"},
  {"name" : "ZOOKEEPER_SERVER"},
  {"name" : "NAMENODE"},
- {"name" : "SECONDARY_NAMENODE"}'
+ {"name" : "ZKFC"}'
   slave_services: '{"name" : "ZOOKEEPER_CLIENT"},
  {"name" : "HDFS_CLIENT"},
  {"name" : "METRICS_MONITOR"},
