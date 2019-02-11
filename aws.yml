@@ -83,15 +83,16 @@ multi-min-s3:
   hdp_build_number: "78"
   database: "embedded"
   s3a: "true"
-  components: '{"name" : "ZOOKEEPER_CLIENT"},
+  ambari_services: '{"name" : "AMBARI_SERVER"},
+ {"name" : "METRICS_MONITOR"}'
+  master_services: '{"name" : "ZOOKEEPER_CLIENT"},
  {"name" : "HDFS_CLIENT"},
- {"name" : "AMBARI_SERVER"},
  {"name" : "METRICS_COLLECTOR"},
  {"name" : "METRICS_MONITOR"},
  {"name" : "ZOOKEEPER_SERVER"},
  {"name" : "NAMENODE"},
  {"name" : "SECONDARY_NAMENODE"}'
-  slave: '{"name" : "ZOOKEEPER_CLIENT"},
+  slave_services: '{"name" : "ZOOKEEPER_CLIENT"},
  {"name" : "HDFS_CLIENT"},
  {"name" : "METRICS_MONITOR"},
  {"name" : "NODEMANAGER"},
