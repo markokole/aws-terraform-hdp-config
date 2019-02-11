@@ -95,7 +95,6 @@ multi-min-s3:
   slave_services: '{"name" : "ZOOKEEPER_CLIENT"},
  {"name" : "HDFS_CLIENT"},
  {"name" : "METRICS_MONITOR"},
- {"name" : "NODEMANAGER"},
  {"name" : "DATANODE"}'
 
 ###### multinode configuration ######
