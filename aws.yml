@@ -2,7 +2,7 @@
 
 ###### instance configuration ######
 
-test-instance:
+aws:
   region: us-east-1
   availability_zone: us-east-1a
   ami_id: ami-9887c6e7
