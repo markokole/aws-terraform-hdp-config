@@ -7,8 +7,7 @@ ami_id: ami-9887c6e7
 cidr_block: 10.0.0.0/24
 enable_dns_hostnames: true
 # Consul path to tree where AWS properties will be written
-# path_to_generated_aws_properties: aws-properties/test-instance
-path_to_generated_aws_properties: "generated_aws_properties"
+path_to_generated_aws_properties: "generated"
 vpc_name: "Terraform VPC"
 gateway_name: "Terraform IGW"
 route_table_cidr_block_all: 0.0.0.0/0
