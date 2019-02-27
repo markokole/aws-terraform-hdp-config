@@ -30,7 +30,7 @@ single-hive-s3:
   hdp_build_number: "78"
   database: "postgres"
   s3a: "true"
-  components: '{"name" : "ZOOKEEPER_CLIENT"},
+  master_services: '{"name" : "ZOOKEEPER_CLIENT"},
  {"name" : "HDFS_CLIENT"},
  {"name" : "HIVE_CLIENT"},
  {"name" : "MAPREDUCE2_CLIENT"},
