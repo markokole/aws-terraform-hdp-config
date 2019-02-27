@@ -97,6 +97,7 @@ max-cluster:
  {"name" : "APP_TIMELINE_SERVER"},
  {"name" : "HST_SERVER"},
  {"name" : "HST_AGENT"},
+ {"name" : "RESOURCEMANAGER"},
  {"name" : "HISTORYSERVER"},
  {"name" : "SPARK2_JOBHISTORYSERVER"},
  {"name" : "KNOX_GATEWAY"},
@@ -120,7 +121,6 @@ max-cluster:
  {"name" : "HBASE_CLIENT"},
  {"name" : "PIG"},
  {"name" : "SPARK2_CLIENT"},
- {"name" : "RESOURCEMANAGER"},
  {"name" : "HIVE_SERVER"},
  {"name" : "HIVE_METASTORE"},
  {"name" : "HBASE_MASTER"},
@@ -143,10 +143,4 @@ max-cluster:
 # When installing HDP 3 the component HCAT must not be part of the blueprint.
 # When installing HDP 3 the component SLIDER must not be part of the blueprint.
 # When installing HDP 3 the component WEBHCAT_SERVER must not be part of the blueprint.
-
-
-r-server:
-  instance_type: t2.small
-  no_instances: 1
-  tags:
-    Name: r-server
+# Only one RESOURCEMANAGER allowed
