@@ -1,0 +1,5 @@
+basic:
+  instance_type: t2.small
+  no_instances: 1
+  tags:
+    Name: r-server
