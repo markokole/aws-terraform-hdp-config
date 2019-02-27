@@ -20,6 +20,29 @@ single-min-s3:
  {"name" : "SECONDARY_NAMENODE"},
  {"name" : "DATANODE"}'
 
+# single node cluster with minimal services
+single-ranger:
+  type: "single"
+  instance_type: "t2.large"
+  cluster_name: "single-ranger"
+  ambari_version: "2.7.3.0"
+  hdp_version: "3.1.0.0"
+  hdp_build_number: "78"
+  database: "embedded"
+  s3a: "true"
+  master_services: '{"name" : "ZOOKEEPER_CLIENT"},
+ {"name" : "HDFS_CLIENT"},
+ {"name" : "AMBARI_SERVER"},
+ {"name" : "METRICS_COLLECTOR"},
+ {"name" : "METRICS_MONITOR"},
+ {"name" : "ZOOKEEPER_SERVER"},
+ {"name" : "NAMENODE"},
+ {"name" : "SECONDARY_NAMENODE"},
+ {"name" : "DATANODE"},
+ {"name" : "RANGER_ADMIN"},
+ {"name" : "RANGER_USERSYNC"},
+ {"name" : "RANGER_KMS_SERVER"}'
+
 # single node cluster with Hive for work with S3
 single-hive-s3:
   type: "single"
