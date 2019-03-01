@@ -39,9 +39,7 @@ single-ranger:
  {"name" : "NAMENODE"},
  {"name" : "SECONDARY_NAMENODE"},
  {"name" : "DATANODE"},
- {"name" : "RANGER_ADMIN"}'
-
- #,
+ {"name" : "RANGER_ADMIN"},
  #{"name" : "RANGER_USERSYNC"},
  #{"name" : "RANGER_KMS_SERVER"}'
 
