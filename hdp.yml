@@ -40,8 +40,8 @@ single-ranger:
  {"name" : "SECONDARY_NAMENODE"},
  {"name" : "DATANODE"},
  {"name" : "RANGER_ADMIN"},
- #{"name" : "RANGER_USERSYNC"},
- #{"name" : "RANGER_KMS_SERVER"}'
+ {"name" : "RANGER_USERSYNC"},
+ {"name" : "RANGER_KMS_SERVER"}'
 
 # single node cluster with Hive for work with S3
 single-hive-s3:
