@@ -1,2 +1,3 @@
 test-cluster:
+  instance_type: t2.micro
   no_workers: 3
