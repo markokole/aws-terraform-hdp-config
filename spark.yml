@@ -1,4 +1,6 @@
+# this one is just to show working cluster
 test-cluster:
   instance_type_master: t2.micro
   instance_type_worker: t2.micro
   no_workers: 1
+  execute_file: run_local_pi_test.yml
