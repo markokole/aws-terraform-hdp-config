@@ -2,4 +2,4 @@ test-cluster:
   instance_type: t2.micro
   instance_type_master: t2.micro
   instance_type_worker: t2.micro
-  no_workers: 5
+  no_workers: 1
