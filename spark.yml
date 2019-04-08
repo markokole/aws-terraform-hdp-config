@@ -8,5 +8,5 @@ test-local:
 test-cluster:
   instance_type_master: t2.small
   instance_type_worker: t2.medium
-  no_workers: 1
+  no_workers: 2
   execute_file: run_cluster_pi_test.yml
