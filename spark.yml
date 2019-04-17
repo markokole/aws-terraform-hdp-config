@@ -21,11 +21,11 @@ log-reg-iris:
   instance_type_master: t2.micro
   instance_type_worker: t2.micro
   no_workers: 1
-  run_file: "pyspark/lr_iris/lr_iris.py"
   input_file: "s3a://hdp-hive-s3/test/iris.csv"
   output_folder: "s3a://hdp-hive-s3/test/git_iris_out"
   spark_job_name: "Run linear regression on iris dataset"
   github_repo: "https://github.com/markokole/ds-code-for-ias.git"
   github_dest: "/home/centos/ds-code-for-ias"
   spark_job_string: "pyspark/lr_iris/lr_iris.py;s3a://hdp-hive-s3/test/iris.csv;s3a://hdp-hive-s3/test/git_iris_out"
+  run_file: "pyspark/lr_iris/lr_iris.py"
   exec_path: "pyspark/lr_iris/lr_iris.py"
