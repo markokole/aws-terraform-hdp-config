@@ -1,5 +1,5 @@
 # this one is just to show working cluster
-/*
+
 test-local:
   instance_type_master: t2.micro
   instance_type_worker: t2.micro
@@ -11,7 +11,6 @@ test-cluster:
   instance_type_worker: t2.medium
   no_workers: 1
   execute_file: run_cluster_pi_test.yml
-*/
 
 lr-iris:
   instance_tag: lr_iris
