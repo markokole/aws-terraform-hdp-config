@@ -14,6 +14,7 @@ test-cluster:
   instance_type_worker: t2.medium
   no_workers: 1
 
+# linear regression on iris dataset with spark
 lr-iris:
   instance_tag: lr_iris
   ami: "ami-0eb0892f46a18e1de"
