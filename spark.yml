@@ -18,7 +18,7 @@ log-reg-iris:
   ami: "ami-0eb0892f46a18e1de"
   instance_type_master: t2.micro
   instance_type_worker: t2.micro
-  no_workers: 1
+  no_workers: 2
   spark_job_name: "Run linear regression on iris dataset"
   git_repo: "https://github.com/markokole/ds-code-for-ias.git"
   git_dest: "/home/centos/ds-code-for-ias"
