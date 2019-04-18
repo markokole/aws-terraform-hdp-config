@@ -29,8 +29,8 @@ log-reg-iris:
 log-reg-santander:
   instance_tag: lr_santander
   ami: "ami-0eb0892f46a18e1de"
-  instance_type_master: t2.micro
-  instance_type_worker: t2.micro
+  instance_type_master: t2.small
+  instance_type_worker: t2.medium
   no_workers: 2
   spark_job_name: "Run linear regression on santander dataset"
   git_repo: "https://github.com/markokole/ds-code-for-ias.git"
