@@ -24,3 +24,16 @@ log-reg-iris:
   git_dest: "/home/centos/ds-code-for-ias"
   spark_job_args: "s3a://hdp-hive-s3/test/iris.csv;s3a://hdp-hive-s3/test/git_iris_out"
   exec_path: "pyspark/lr_iris/lr_iris.py"
+
+# linear regression on iris dataset with spark
+log-reg-santander:
+  instance_tag: lr_santander
+  ami: "ami-0eb0892f46a18e1de"
+  instance_type_master: t2.micro
+  instance_type_worker: t2.micro
+  no_workers: 2
+  spark_job_name: "Run linear regression on santander dataset"
+  git_repo: "https://github.com/markokole/ds-code-for-ias.git"
+  git_dest: "/home/centos/ds-code-for-ias"
+  spark_job_args: "s3a://hdp-hive-s3/santander/train.csv"
+  exec_path: "pyspark/santander/lr_santander.py"
