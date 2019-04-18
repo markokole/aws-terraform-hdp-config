@@ -5,8 +5,6 @@ test-local:
   instance_type_master: t2.micro
   instance_type_worker: t2.micro
   no_workers: 1
-  input_file: s3a://hdp-hive-s3/test/iris.csv
-  output_folder: s3a://hdp-hive-s3/test/git_iris_out
   spark_job_name: "Run linear regression on iris"
 
 test-cluster:
@@ -21,10 +19,8 @@ log-reg-iris:
   instance_type_master: t2.micro
   instance_type_worker: t2.micro
   no_workers: 1
-  input_file: "s3a://hdp-hive-s3/test/iris.csv"
-  output_folder: "s3a://hdp-hive-s3/test/git_iris_out"
   spark_job_name: "Run linear regression on iris dataset"
-  github_repo: "https://github.com/markokole/ds-code-for-ias.git"
-  github_dest: "/home/centos/ds-code-for-ias"
+  git_repo: "https://github.com/markokole/ds-code-for-ias.git"
+  git_dest: "/home/centos/ds-code-for-ias"
   spark_job_args: "s3a://hdp-hive-s3/test/iris.csv;s3a://hdp-hive-s3/test/git_iris_out"
   exec_path: "pyspark/lr_iris/lr_iris.py"
