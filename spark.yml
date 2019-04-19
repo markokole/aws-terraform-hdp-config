@@ -35,5 +35,5 @@ log-reg-santander:
   spark_job_name: "Run linear regression on santander dataset"
   git_repo: "https://github.com/markokole/ds-code-for-ias.git"
   git_dest: "/home/centos/ds-code-for-ias"
-  spark_job_args: "s3a://hdp-hive-s3/santander/train.csv"
+  spark_job_args: "s3a://hdp-hive-s3/santander/train.csv/s3a://hdp-hive-s3/santander/accuracy"
   exec_path: "pyspark/santander/lr_santander.py"
