@@ -4,7 +4,7 @@
 region: us-east-1
 availability_zone: us-east-1a
 ami_id: ami-9887c6e7
-cidr_blocks: 10.0.0.0/24
+cidr_block: 10.0.0.0/24
 enable_dns_hostnames: true
 # Consul path to tree where AWS properties will be written
 path_to_generated_aws_properties: "generated"
