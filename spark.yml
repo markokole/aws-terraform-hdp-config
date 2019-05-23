@@ -24,6 +24,7 @@ log-reg-santander:
   spark_job_args: "s3a://hdp-hive-s3/santander/train.csv;s3a://hdp-hive-s3/santander/output"
   exec_path: "pyspark/santander/lr_santander.py"
 
+# testing application submission
 sbt-test:
   instance_tag: sbt_test
   ami: "ami-0eb0892f46a18e1de"
