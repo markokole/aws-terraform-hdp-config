@@ -34,6 +34,6 @@ sbt-test:
   spark_job_name: "Test Spark application"
   git_repo: "https://github.com/markokole/ds-code-for-ias.git"
   git_dest: "/home/centos/ds-code-for-ias"
-  spark_job_args: "s3a://hdp-hive-s3/test.txt;"IaC"
+  spark_job_args: "s3a://hdp-hive-s3/test.txt;IaC"
   exec_path: "spark/Test.jar"
   class_name: "Test"
