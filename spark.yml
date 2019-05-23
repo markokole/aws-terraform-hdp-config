@@ -23,3 +23,16 @@ log-reg-santander:
   git_dest: "/home/centos/ds-code-for-ias"
   spark_job_args: "s3a://hdp-hive-s3/santander/train.csv;s3a://hdp-hive-s3/santander/output"
   exec_path: "pyspark/santander/lr_santander.py"
+
+sbt-test:
+  instance_tag: sbt_test
+  ami: "ami-0eb0892f46a18e1de"
+  instance_type_master: t2.small
+  instance_type_worker: t2.medium
+  no_workers: 1
+  spark_job_name: "Test Spark application"
+  git_repo: "https://github.com/markokole/ds-code-for-ias.git"
+  git_dest: "/home/centos/ds-code-for-ias"
+  spark_job_args: "s3a://hdp-hive-s3/test.txt;"IaC"
+  exec_path: "spark/Test.jar"
+  class_name: "Test"
