@@ -35,5 +35,5 @@ sbt-test:
   git_repo: "https://github.com/markokole/ds-code-for-ias.git"
   git_dest: "/home/centos/ds-code-for-ias"
   spark_job_args: "s3a://hdp-hive-s3/test.txt;IaC"
-  exec_path: "spark/Test.jar"
+  exec_path: "spark/test.jar"
   class_name: "Test"
