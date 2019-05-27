@@ -1,0 +1,4 @@
+single-node:
+  instance_tag: kafka_single
+  ami: ""
+  no_nodes: "1"
