@@ -1,5 +1,11 @@
 single-node:
-  instance_tag: kafka_single
+  instance_tag: single
   ami: ""
   instance_type: "t2.micro"
   no_nodes: "1"
+
+multi-node:
+  instance_tag: multi
+  ami: ""
+  instance_type: "t2.micro"
+  no_nodes: "3"
