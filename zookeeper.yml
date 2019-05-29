@@ -1,7 +1,7 @@
 min-cluster:
   instance_tag: min
   ami: ""
-  instance_type: "t2.micro"
+  instance_type: "t2.small"
   no_nodes: "3"
 
 five-cluster:
