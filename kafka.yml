@@ -3,9 +3,13 @@ min-cluster:
   ami: ""
   instance_type: "t2.small"
   no_nodes: "3"
+  zookeeper_url: "http://apache.uib.no/zookeeper/zookeeper-3.4.14/zookeeper-3.4.14.tar.gz"
+  kafka_url: "http://apache.uib.no/kafka/2.2.0/kafka_2.12-2.2.0.tgz"
 
 five-cluster:
   instance_tag: five
   ami: ""
   instance_type: "t2.small"
   no_nodes: "5"
+  zookeeper_url: "http://apache.uib.no/zookeeper/zookeeper-3.4.14/zookeeper-3.4.14.tar.gz"
+  kafka_url: "http://apache.uib.no/kafka/2.2.0/kafka_2.12-2.2.0.tgz"
