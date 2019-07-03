@@ -16,6 +16,7 @@ five-cluster:
 
 medium-cluster:
   instance_tag: "medium"
+  ami: ""
   instance_type: "t2.medium"
   no_nodes: "3"
   zookeeper_url: "http://apache.uib.no/zookeeper/zookeeper-3.4.14/zookeeper-3.4.14.tar.gz"
