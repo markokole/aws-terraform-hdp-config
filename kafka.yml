@@ -15,7 +15,7 @@ five-cluster:
   kafka_url: "http://apache.uib.no/kafka/2.2.0/kafka_2.12-2.2.0.tgz"
 
 single-cluster:
-  instance_tag: "kafka_single"
+  instance_tag: "single"
   ami: ""
   instance_type: "t2.medium"
   no_nodes: "1"
