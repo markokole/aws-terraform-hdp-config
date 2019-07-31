@@ -1,10 +1,9 @@
 # linear regression on iris dataset with spark
 log-reg-iris:
   instance_tag: lr_iris
-  ami: "ami-03b68f2e6ffb731c4"
   instance_type_master: t2.micro
   instance_type_worker: t2.micro
-  no_workers: 1
+  no_workers: 5
   spark_job_name: "Run linear regression on iris dataset"
   git_repo: "https://github.com/markokole/ds-code-for-ias.git"
   git_dest: "/home/centos/ds-code-for-ias"
@@ -14,7 +13,6 @@ log-reg-iris:
 # linear regression on iris dataset with spark
 log-reg-santander:
   instance_tag: lr_santander
-  ami: "ami-03b68f2e6ffb731c4"
   instance_type_master: t2.small
   instance_type_worker: t2.medium
   no_workers: 1
@@ -27,7 +25,6 @@ log-reg-santander:
 # testing application submission
 sbt-test:
   instance_tag: sbt_test
-  ami: "ami-03b68f2e6ffb731c4"
   instance_type_master: t2.small
   instance_type_worker: t2.medium
   no_workers: 1
