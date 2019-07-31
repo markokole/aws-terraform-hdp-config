@@ -1,3 +1,17 @@
+## Parameters with explanation
+# linear regression on iris dataset with spark
+#project-name:
+#  instance_tag: tag_for_distincting_among_AWS_services
+#  instance_type_master: t2.micro #valid instance type, check AWS documentation
+#  instance_type_worker: t2.micro #valid instance type, check AWS documentation
+#  no_workers: 1 #number of workers in cluster
+#  spark_job_name: "A short meaningful name of the job"
+#  git_repo: "https://github.com/markokole/ds-code-for-ias.git" #repository where the code can be found
+#  git_dest: "/home/centos/ds-code-for-ias" #path on client where the repository will be cloned
+#  spark_job_args: "s3a://hdp-hive-s3/test/iris.csv;s3a://hdp-hive-s3/test/git_iris_out" #arguments that are taken in at code runtime
+#  exec_path: "pyspark/lr_iris/lr_iris.py" #path to the execution file FROM git_dest!
+## Add new blocks below!
+
 # linear regression on iris dataset with spark
 log-reg-iris:
   instance_tag: lr_iris
