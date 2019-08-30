@@ -1,4 +1,6 @@
 ---
-
-location: "westeurope"
-customer: "testcustomer"
+test: 
+  provision_resource_group: "1"
+  customer: "testcustomer"
+  location: "westeurope"
+  
