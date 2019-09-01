@@ -3,6 +3,6 @@
 path_to_generated_azure_properties: "generated"
 
 test: 
-  provision_resource_group: "1"
+  provision_resource_group: "0"
   customer: "testcustomer"
   location: "westeurope"
