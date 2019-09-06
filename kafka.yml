@@ -1,3 +1,11 @@
+#configuration based on the iac-cloud-kafka project
+test-conf:
+  project: "marko-kafka"
+  no_nodes: "3"
+  zookeeper_url: "http://apache.uib.no/zookeeper/zookeeper-3.4.14/zookeeper-3.4.14.tar.gz"
+  kafka_url: "http://apache.uib.no/kafka/2.2.0/kafka_2.12-2.2.0.tgz"
+  id_rsa_path: "/root/.ssh/id_rsa"
+
 min-cluster:
   instance_tag: "min"
   ami: ""
