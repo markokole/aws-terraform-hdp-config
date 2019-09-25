@@ -8,7 +8,6 @@
 #  spark_job_name: "A short meaningful name of the job"
 #  git_repo: "https://github.com/markokole/ds-code-for-ias.git" #repository where the code can be found
 #  git_dest: "/home/centos/ds-code-for-ias" #path on client where the repository will be cloned
-#  spark_job_args: "s3a://hdp-hive-s3/test/iris.csv;s3a://hdp-hive-s3/test/git_iris_out" #arguments that are taken in at code runtime
 #  exec_path: "pyspark/lr_iris/lr_iris.py" #path to the execution file FROM git_dest!
 ## Add new blocks below!
 
@@ -17,11 +16,10 @@ log-reg-iris:
   instance_tag: lr_iris
   instance_type_master: t2.micro
   instance_type_worker: t2.micro
-  no_workers: 1
+  no_workers: 3
   spark_job_name: "Run linear regression on iris dataset"
   git_repo: "https://github.com/markokole/ds-code-for-ias.git"
   git_dest: "/home/centos/ds-code-for-ias"
-#  spark_job_args: "s3a://hdp-hive-s3/test/iris.csv;s3a://hdp-hive-s3/test/git_iris_out"
   exec_path: "pyspark/lr_iris/lr_iris.py"
 
 # linear regression on iris dataset with spark
