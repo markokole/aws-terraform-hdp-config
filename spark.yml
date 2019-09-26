@@ -19,7 +19,7 @@ log-reg-iris:
   no_workers: 1
   spark_job_name: "Run linear regression on iris dataset"
   git_repo: "https://github.com/markokole/ds-code-for-ias.git"
-  git_dest: "/home/centos/ds-code-for-ias"
+  git_dest: "/home/spark/ds-code-for-ias"
   exec_path: "pyspark/lr_iris/lr_iris.py"
 
 # linear regression on iris dataset with spark
