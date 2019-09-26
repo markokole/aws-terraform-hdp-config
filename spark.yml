@@ -16,7 +16,7 @@ log-reg-iris:
   instance_tag: lr_iris
   instance_type_master: t2.micro
   instance_type_worker: t2.micro
-  no_workers: 3
+  no_workers: 5
   spark_job_name: "Run linear regression on iris dataset"
   git_repo: "https://github.com/markokole/ds-code-for-ias.git"
   git_dest: "/home/spark/ds-code-for-ias"
