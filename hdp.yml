@@ -1,80 +1,8 @@
-############################################################
-
-# single node cluster with minimal services
-single-min-s3:
-  type: "single"
-  instance_type: "t2.large"
-  cluster_name: "single-min-s3"
-  ambari_version: "2.7.3.0"
-  hdp_version: "3.1.0.0"
-  hdp_build_number: "78"
-  database: "embedded"
-  s3a: "true"
-  master_services: '{"name" : "ZOOKEEPER_CLIENT"},
- {"name" : "HDFS_CLIENT"},
- {"name" : "AMBARI_SERVER"},
- {"name" : "METRICS_COLLECTOR"},
- {"name" : "METRICS_MONITOR"},
- {"name" : "ZOOKEEPER_SERVER"},
- {"name" : "NAMENODE"},
- {"name" : "SECONDARY_NAMENODE"},
- {"name" : "DATANODE"}'
-
-# single node cluster with minimal services
-single-ranger:
-  type: "single"
-  instance_type: "t2.large"
-  cluster_name: "single-ranger"
-  ambari_version: "2.7.3.0"
-  hdp_version: "3.1.0.0"
-  hdp_build_number: "78"
-  database: "postgres"
-  s3a: "true"
-  master_services: '{"name" : "ZOOKEEPER_CLIENT"},
- {"name" : "HDFS_CLIENT"},
- {"name" : "AMBARI_SERVER"},
- {"name" : "METRICS_COLLECTOR"},
- {"name" : "METRICS_MONITOR"},
- {"name" : "ZOOKEEPER_SERVER"},
- {"name" : "NAMENODE"},
- {"name" : "SECONDARY_NAMENODE"},
- {"name" : "DATANODE"},
- {"name" : "RANGER_ADMIN"},
- {"name" : "RANGER_USERSYNC"},
- {"name" : "RANGER_KMS_SERVER"}'
-
-# single node cluster with Hive for work with S3
-single-hive-s3:
-  type: "single"
-  instance_type: "t2.xlarge"
-  cluster_name: "single-hive-s3"
-  ambari_version: "2.7.3.0"
-  hdp_version: "3.1.0.0"
-  hdp_build_number: "78"
-  database: "postgres"
-  s3a: "true"
-  master_services: '{"name" : "ZOOKEEPER_CLIENT"},
- {"name" : "HDFS_CLIENT"},
- {"name" : "HIVE_CLIENT"},
- {"name" : "MAPREDUCE2_CLIENT"},
- {"name" : "YARN_CLIENT"},
- {"name" : "AMBARI_SERVER"},
- {"name" : "METRICS_COLLECTOR"},
- {"name" : "METRICS_MONITOR"},
- {"name" : "ZOOKEEPER_SERVER"},
- {"name" : "NAMENODE"},
- {"name" : "SECONDARY_NAMENODE"},
- {"name" : "METRICS_MONITOR"},
- {"name" : "DATANODE"},
- {"name" : "METRICS_MONITOR"},
- {"name" : "HIVE_SERVER"},
- {"name" : "HIVE_METASTORE"},
- {"name" : "HISTORYSERVER"},
- {"name" : "TIMELINE_READER"},
- {"name" : "YARN_REGISTRY_DNS"},
- {"name" : "APP_TIMELINE_SERVER"},
- {"name" : "NODEMANAGER"},
- {"name" : "RESOURCEMANAGER"}'
+###### multinode configuration ######
+# When installing HDP 3 the component HCAT must not be part of the blueprint.
+# When installing HDP 3 the component SLIDER must not be part of the blueprint.
+# When installing HDP 3 the component WEBHCAT_SERVER must not be part of the blueprint.
+# Only one RESOURCEMANAGER allowed
 
 multi-min-s3:
   type: "cluster"
@@ -101,7 +29,6 @@ multi-min-s3:
  {"name" : "METRICS_MONITOR"},
  {"name" : "DATANODE"}'
 
-###### multinode configuration ######
 
 max-cluster:
   type: cluster
@@ -163,7 +90,6 @@ max-cluster:
  {"name" : "HBASE_CLIENT"},
  {"name" : "PIG"},
  {"name" : "SPARK2_CLIENT"}'
-# When installing HDP 3 the component HCAT must not be part of the blueprint.
-# When installing HDP 3 the component SLIDER must not be part of the blueprint.
-# When installing HDP 3 the component WEBHCAT_SERVER must not be part of the blueprint.
-# Only one RESOURCEMANAGER allowed
+
+############################################################
+############################################################
