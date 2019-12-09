@@ -5,6 +5,7 @@
 #  instance_type_master: t2.micro #valid instance type, check AWS documentation
 #  instance_type_worker: t2.micro #valid instance type, check AWS documentation
 #  no_workers: 1 #number of workers in cluster
+#  spark_url: URL to apache spark tgz file
 #  spark_job_name: "A short meaningful name of the job"
 #  git_repo: "https://github.com/markokole/ds-code-for-ias.git" #repository where the code can be found
 #  git_dest: "/home/centos/ds-code-for-ias" #path on client where the repository will be cloned
@@ -17,6 +18,7 @@ log-reg-iris:
   instance_type_master: t2.micro
   instance_type_worker: t2.micro
   no_workers: 1
+  spark_url: "http://apache.uib.no/spark/spark-2.4.4/spark-2.4.4-bin-hadoop2.7.tgz"
   spark_job_name: "Run linear regression on iris dataset"
   git_repo: "https://github.com/markokole/ds-code-for-ias.git"
   git_dest: "/home/spark/ds-code-for-ias"
