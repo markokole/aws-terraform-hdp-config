@@ -18,8 +18,8 @@ log-reg-iris:
   instance_type_master: t2.micro
   instance_type_worker: t2.micro
   no_workers: 1
-  #spark_url: "http://apache.uib.no/spark/spark-2.4.4/spark-2.4.4-bin-hadoop2.7.tgz"
-  spark_url: "http://apache.uib.no/spark/spark-3.0.0-preview/spark-3.0.0-preview-bin-hadoop2.7.tgz"
+  spark_url: "http://apache.uib.no/spark/spark-2.4.4/spark-2.4.4-bin-hadoop2.7.tgz"
+  #spark_url: "http://apache.uib.no/spark/spark-3.0.0-preview/spark-3.0.0-preview-bin-hadoop2.7.tgz"
   spark_job_name: "Run linear regression on iris dataset"
   git_repo: "https://github.com/markokole/ds-code-for-ias.git"
   git_dest: "/home/spark/ds-code-for-ias"
